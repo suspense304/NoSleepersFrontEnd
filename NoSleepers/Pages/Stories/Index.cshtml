@@ -1,0 +1,27 @@
+﻿@page
+@model NoSleepers.StoryModel
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Stories</h1>
+
+<table>
+
+    <tr>
+        <td>Title</td>
+        <td>Author</td>
+        <td>Score</td>
+    </tr>
+
+    @foreach(var story in Model.Stories)
+    {
+        <tr>
+            <td>@story.Title</td>
+            <td>@story.Author</td>
+            <td>@story.Score</td>
+        </tr>
+    }
+
+</table>
+

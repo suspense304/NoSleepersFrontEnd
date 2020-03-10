@@ -1,0 +1,18 @@
+﻿@page
+@model NoSleepers.AuthorModel
+@{
+    ViewData["Title"] = "Authors";
+}
+
+<h1>Authors</h1>
+
+<table>
+    <tr><td>Name</td></tr>
+    @foreach(var author in Model.Authors)
+    {
+        <tr>
+            <td>@author.Name</td>
+        </tr>
+    }
+</table>
+

@@ -10,7 +10,7 @@ namespace NoSleepers.Core
         {
             Stories = new List<Story>();
         }
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string Name { get; set; }
         public bool Verified { get; set; }
 

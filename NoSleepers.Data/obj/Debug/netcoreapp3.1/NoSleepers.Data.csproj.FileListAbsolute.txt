@@ -1,11 +1,11 @@
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\bin\Debug\netcoreapp3.1\NoSleepers.Data.deps.json
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\bin\Debug\netcoreapp3.1\NoSleepers.Data.dll
-C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.AssemblyInfoInputs.cache
-C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.AssemblyInfo.cs
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\bin\Debug\netcoreapp3.1\NoSleepers.Data.pdb
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\bin\Debug\netcoreapp3.1\NoSleepers.Core.dll
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\bin\Debug\netcoreapp3.1\NoSleepers.Core.pdb
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.csprojAssemblyReference.cache
+C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.AssemblyInfoInputs.cache
+C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.AssemblyInfo.cs
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.csproj.CopyComplete
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.dll
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Data\obj\Debug\netcoreapp3.1\NoSleepers.Data.pdb

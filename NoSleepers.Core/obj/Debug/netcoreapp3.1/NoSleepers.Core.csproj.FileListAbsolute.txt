@@ -1,8 +1,8 @@
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\bin\Debug\netcoreapp3.1\NoSleepers.Core.deps.json
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\bin\Debug\netcoreapp3.1\NoSleepers.Core.dll
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\bin\Debug\netcoreapp3.1\NoSleepers.Core.pdb
-C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.csprojAssemblyReference.cache
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.AssemblyInfoInputs.cache
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.AssemblyInfo.cs
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.dll
 C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.pdb
+C:\Users\dhantke\Desktop\Sites\NoSleepers\SITE\NoSleepers\NoSleepers.Core\obj\Debug\netcoreapp3.1\NoSleepers.Core.csprojAssemblyReference.cache

@@ -6,22 +6,90 @@
 
 <h1>Today's Stories</h1>
 
-<table>
+@if(User.Identity.IsAuthenticated)
+{
 
-    <tr>
-        <td>Title</td>
-        <td>Author</td>
-        <td>Score</td>
-    </tr>
+}
 
-    @foreach(var story in Model.Stories)
-    {
+<table id="storyTable">
+    <thead>
         <tr>
-            <td>@story.Title</td>
-            <td>@story.Author</td>
-            <td>@story.Score</td>
+            <td>Title</td>
+            <td>Author</td>
+            <td>Score</td>
         </tr>
-    }
+    </thead>
+    
+    <tbody>
+        @if (Model.Stories.Count > 0)
+        {
+            @foreach (var story in Model.Stories)
+            {
+                <tr>
+                    <td>
+                        @story.Title<br />
+                        <img src="~/Images/empty_star.png" alt="Star Rating" align="middle" id="1" class="rating" mid="@story.Id" />
+                        <img src="~/Images/empty_star.png" alt="Star Rating" align="middle" id="2" class="rating" mid="@story.Id" />
+                        <img src="~/Images/empty_star.png" alt="Star Rating" align="middle" id="3" class="rating" mid="@story.Id" />
+                        <img src="~/Images/empty_star.png" alt="Star Rating" align="middle" id="4" class="rating" mid="@story.Id" />
+                        <img src="~/Images/empty_star.png" alt="Star Rating" align="middle" id="5" class="rating" mid="@story.Id" />
+                        (<span class="avr">@story.AverageRating</span>)<br />
+                        <div id="result" />
+                    </td>
+                    <td>@story.Author.Name</td>
+                    <td>@story.Score</td>
+                </tr>
+            }
+        }
+    </tbody>
+    
+
 
 </table>
+@section Scripts{
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript">
+        $('#storyTable > tbody  > tr').each(function () {
+            var av = $(this).find("span.avr").text();
+            if (av != "" || av != null) {
+                var img = $(this).find("img[id='" + parseInt(av) + "']");
+                img.attr("src", "/Images/filled_star.png").prevAll("img.rating").attr("src", "/Images/filled_star.png");
+            }
+        });
+        
 
+        $(function () {
+            $("img.rating").mouseover(function () {
+                giveRating($(this), "filled_star.png");
+                $(this).css("cursor", "pointer");
+            });
+
+            $("img.rating").mouseout(function () {
+                giveRating($(this), "empty_star.png");
+                refilRating($(this));
+            });
+
+            $("img.rating").click(function (e) {
+                $(this).css('color', 'red');
+                var url = "/api/ratings/writeRating/" + parseInt($(this).attr("mid")) + "/" + parseInt($(this).attr("id"));
+                $.post(url, null, function (data) {
+                    $(e.currentTarget).closest('tr').find('div.result').text(data).css('color', 'red');
+                });
+                $("#result").text("Your rating has been received...").css('color', 'red').css('text-size', '.5em').fadeOut(4000);
+                    
+            });
+        });
+
+        function giveRating(img, image) {
+            img.attr("src", "/Images/" + image)
+                .prevAll("img.rating").attr("src", "/Images/" + image);
+        }
+        function refilRating(img) {
+            var rt = $(img).closest('tr').find("span.avr").text();
+            var img = $(img).closest('tr').find("img[id='" + parseInt(rt) + "']");
+            img.attr("src", "/images/filled_star.png").prevAll("img.rating").attr("src", "/images/filled_star.png");
+        }
+
+
+    </script>
+}

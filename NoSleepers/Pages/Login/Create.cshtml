@@ -1,0 +1,33 @@
+﻿@page
+@model NoSleepers.CreateModel
+@{
+    ViewData["Title"] = "Create Account";
+}
+
+<h1>Create Account</h1>
+
+@Model.ErrMessage
+<form method="post" asp-page="Create">
+    <table>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" asp-for="@Model.Email" /></td>
+        </tr>
+        <tr>
+            <td>Username</td>
+            <td><input type="text" asp-for="@Model.UserName" /></td>
+        </tr>
+        <tr>
+            <td>Password</td>
+            <td><input type="password" asp-for="@Model.Password" /></td>
+        </tr>
+        <tr>
+            <td>Reddit Account</td>
+            <td><input type="password" asp-for="@Model.RedditAccount" /></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" value="Login" /></td>
+        </tr>
+    </table>
+</form>

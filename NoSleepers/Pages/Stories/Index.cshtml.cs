@@ -11,18 +11,20 @@ namespace NoSleepers
 {
     public class StoryModel : PageModel
     {
-        private readonly NoSleepersDbContext _dbContext;
+        private readonly IStoryRepo _storyRepo;
 
-        public IEnumerable<Story> Stories { get; set; }
+        public List<Story> Stories { get; set; }
 
-        public StoryModel(NoSleepersDbContext dbContext)
+        public double Rating { get; set; }
+
+        public StoryModel(IStoryRepo storyRepo)
         {
-            _dbContext = dbContext;
+            _storyRepo = storyRepo;
         }
 
         public void OnGet()
         {
-            Stories = _dbContext.Stories.Take(5).OrderByDescending(s => s.Date).OrderByDescending(s => s.Score).ToList();
+            Stories = _storyRepo.GetNewest(10);
         }
     }
 }

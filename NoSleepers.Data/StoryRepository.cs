@@ -28,12 +28,18 @@ namespace NoSleepers.Data
 
         public List<Story> GetNewest(int count)
         {
-            return _dbContext.Stories.Include(x => x.Author).Take(count).OrderByDescending(x => x.Score).ToList();
+            return _dbContext.Stories.Include(x => x.Author)
+                                     .Include(x => x.Ratings)
+                                     .Include(x => x.Favorites)
+                                     .Take(count).OrderByDescending(x => x.Score).ToList();
         }
 
         public Story GetById(int storyId)
         {
-            return _dbContext.Stories.Include(x => x.Author).FirstOrDefault(w => w.Id == storyId);
+            return _dbContext.Stories.Include(x => x.Author)
+                                     .Include(x => x.Ratings)
+                                     .Include(x => x.Favorites)
+                                     .FirstOrDefault(w => w.Id == storyId);
         }
 
         public Story GetByUserId(int authorId)
@@ -44,13 +50,12 @@ namespace NoSleepers.Data
         public async Task WriteRatingForStory(int storyId, int userId, int score)
         {
             // Get the story that was rated
-            var story = await _dbContext.Stories.FirstOrDefaultAsync(story => story.Id == storyId);
+            var story = await _dbContext.Stories.Include(x => x.Ratings).FirstOrDefaultAsync(story => story.Id == storyId);
 
             // Updating thestory with the new rating
             story.WriteRating(userId, score);
 
-            //_dbContext.Stories.Update(story);
-
+            _dbContext.Stories.UpdateRange(story);
             // Save the updated story to the database
             var saved = false;
             while (!saved)

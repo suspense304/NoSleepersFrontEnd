@@ -8,23 +8,23 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\dhantke\\.nuget\\packages\\": {},
+    "C:\\Users\\dough\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dhantke\\Desktop\\Sites\\NoSleepers\\SITE\\NoSleepers\\NoSleepers.Core\\NoSleepers.Core.csproj",
+      "projectUniqueName": "C:\\Users\\dough\\Desktop\\Website Development\\Nosleepers\\Site\\NoSleepers.Core\\NoSleepers.Core.csproj",
       "projectName": "NoSleepers.Core",
-      "projectPath": "C:\\Users\\dhantke\\Desktop\\Sites\\NoSleepers\\SITE\\NoSleepers\\NoSleepers.Core\\NoSleepers.Core.csproj",
-      "packagesPath": "C:\\Users\\dhantke\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dhantke\\Desktop\\Sites\\NoSleepers\\SITE\\NoSleepers\\NoSleepers.Core\\obj\\",
+      "projectPath": "C:\\Users\\dough\\Desktop\\Website Development\\Nosleepers\\Site\\NoSleepers.Core\\NoSleepers.Core.csproj",
+      "packagesPath": "C:\\Users\\dough\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dough\\Desktop\\Website Development\\Nosleepers\\Site\\NoSleepers.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\dhantke\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\dough\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -62,7 +62,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.101\\RuntimeIdentifierGraph.json"
       }
     }
   }

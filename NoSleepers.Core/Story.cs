@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 namespace NoSleepers.Core
@@ -20,6 +21,7 @@ namespace NoSleepers.Core
         public double AverageRating { get; private set; }
         public int NumberOfRatings => Ratings.Count;
         public string Title { get; set; }
+        [ConcurrencyCheck]
         public string Url { get; set; }
 
         public ICollection<Rating> Ratings { get; set; }
@@ -35,8 +37,8 @@ namespace NoSleepers.Core
             }
             else
             {
-                Ratings.Add(new Rating() { StoryId = this.Id, Score = newRating, UserId = userId });
-                AverageRating = ((AverageRating * NumberOfRatings - 1) + newRating) / NumberOfRatings;
+                Ratings.Add(new Rating() { StoryId = this.Id, UserId = userId, Score = newRating });
+                AverageRating = ((AverageRating * (NumberOfRatings - 1)) + newRating) / NumberOfRatings;
             }
         }
 

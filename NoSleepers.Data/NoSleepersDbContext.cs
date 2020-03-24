@@ -13,6 +13,7 @@ namespace NoSleepers.Data
     {
         public DbSet<Story> Stories { get; set; }
         public DbSet<Author> Authors { get; set; }
+        public DbSet<Author> User { get; set; }
         public NoSleepersDbContext(DbContextOptions<NoSleepersDbContext> options) : base(options)
         {
 

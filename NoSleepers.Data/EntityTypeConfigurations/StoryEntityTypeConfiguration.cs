@@ -20,8 +20,9 @@ namespace NoSleepers.Data.EntityTypeConfigurations
 
             builder.OwnsMany(x => x.Ratings, x =>
             {
+                x.WithOwner().HasForeignKey(x => x.UserId);
                 x.WithOwner().HasForeignKey(x => x.StoryId);
-                x.Property(x => x.Score);
+                x.Property(x => x.Score).IsConcurrencyToken().ValueGeneratedOnAddOrUpdate();
                 x.HasKey(y => new { y.StoryId, y.UserId });
                 x.ToTable("Ratings");
 
